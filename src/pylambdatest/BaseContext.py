@@ -39,4 +39,7 @@ class BaseContext:
 	def get_remaining_time_in_millis(self):
 		current_time = time.time() * 1000
 		execution_timeout = self._start_time + self._function_execution_time * 1000
-		return execution_time - current_time
+		return round(execution_timeout - current_time)
+
+	def execution_time(self):
+		return round(self._end_time - self._start_time)

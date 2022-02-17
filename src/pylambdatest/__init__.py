@@ -5,13 +5,17 @@ from pylambdatest.APIGatewayLambdaTest import APIGatewayLambdaTest as APIGateway
 from pylambdatest.CloudFormationLambdaTest import CloudFormationLambdaTest as CloudFormationLambdaTest
 
 
-def create_test(event_type = 'default', event_data = {}):
+def create_test(event_type = 'default', event_context = None, event_data = {}):
 	test_dictionary = {
 		'default' : BaseLambdaTest,
 		'alexa' : AlexaLambdaTest,
 		'apigateway' : APIGatewayLambdaTest,
 		'cloudformation' : CloudFormationLambdaTest
 	}
-
-	event_object = test_dictionary[event_type]()
+	if event_context == None:
+		context = BaseContext()
+	else:
+		context = event_context
+	event_object = test_dictionary[event_type](context)
+	return event_object
 	

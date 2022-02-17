@@ -1,7 +1,7 @@
 from pylambdatest.BaseLambdaTest import BaseLambdaTest
 
 class AlexaLambdaTest(BaseLambdaTest):
-    def __init__(self):
+    def __init__(self, context):
         event = {
             'header' : {
                 'payloadVersion' : None,
@@ -17,6 +17,5 @@ class AlexaLambdaTest(BaseLambdaTest):
                 "accessToken" : None
             }
         }
-        context = {}
-        super().__init__(event, context)
+        super().__init__(context, event = event)
 
