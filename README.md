@@ -36,4 +36,4 @@ print(api_gateway_test.context.execution_time())
 ```
 
 ## License
-[GNU GPL-V2](https://www.gnu.org/licenses/gpl-3.0.html)
+[GNU GPL-V3](https://www.gnu.org/licenses/gpl-3.0.html)
