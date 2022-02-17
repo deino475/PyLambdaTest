@@ -14,3 +14,4 @@ def create_test(event_type = 'default', event_data = {}):
 	}
 
 	event_object = test_dictionary[event_type]()
+	
