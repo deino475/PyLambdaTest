@@ -7,7 +7,7 @@ PyLambdaTest is a simple Python library for testing AWS Lambda functions locally
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install PyLambdaTest.
 
 ```bash
-pip install pylambdatest
+pip install PyLambdaTest
 ```
 
 ## Usage
